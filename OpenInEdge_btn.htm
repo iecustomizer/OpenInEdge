@@ -1,0 +1,11 @@
+<script type="text/javascript">
+// Open this page in Edge
+var win = window.external.menuArguments;
+if (win.document.URL.indexOf('about:') == 0||win.document.URL.indexOf('file:') == 0)
+    { alert('Cannot open about or local pages in Edge.\nOperation cancelled.');}
+else{
+sURL=win.document.URL;
+var w=window.open("microsoft-edge:" + sURL + " ");
+if(w){w.close()};
+}
+</script>

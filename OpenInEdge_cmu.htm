@@ -1,0 +1,19 @@
+<script type="text/javascript">
+// Open this link in Edge
+var win = window.external.menuArguments;
+var sURL = win.event.srcElement;
+if (win.document.URL.indexOf('about:') > 0)
+    { alert('Cannot open about pages in WaterFox.\nOperation cancelled.');}
+else{
+if (sURL.tagName=="A")
+{
+var w=window.open("microsoft-edge:" + sURL + " ");
+}
+else
+{
+sURL=win.document.URL;//location.href;
+var w=window.open("microsoft-edge:" + sURL + " ");
+}
+if(w){w.close()};
+}
+</script>
